@@ -1,0 +1,43 @@
+.new-tweet {
+  display: none;
+}
+
+/* .show-compose {
+  display: block;
+} */
+
+.new-tweet textarea {
+  border-color: transparent;
+  background-color: transparent;  
+  width: 100%;
+  border-bottom: 4px solid #545149;
+  margin-bottom: 12px;
+}
+
+.new-tweet input {
+  font-family: 'Bungee', cursive;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+span.counter {
+  float: right;
+  font-family: 'Bungee', cursive;
+}
+
+.warning {
+  color: red;
+}
+
+#error-msg {
+  margin-bottom: 16px;
+  color: red;
+  display: none;
+}
+
+.show {
+  border: 4px solid red;
+  padding: 12px;
+  margin: 0 auto;
+}

@@ -1,0 +1,38 @@
+nav {
+  position: fixed;
+  height: 120px;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav span.home {
+  font-family: 'Bungee', cursive;
+  padding: 1.5em;
+}
+
+nav div {
+  padding: 1.5em;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav span.bold {
+  font-weight: 700;
+}
+
+nav i {
+  margin: auto;
+  color: #008be8;;
+}
+
+i:hover {
+  cursor: pointer;
+}
