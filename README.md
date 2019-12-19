@@ -6,13 +6,13 @@ I worked on this project in week 4 of the Lighthouse Labs bootcamp. We were give
 
 # Final Product
 
-Initial layout for smaller screens: 
+[Initial layout for smaller screens:](https://github.com/susan-wz/tweeter/blob/master/docs/Screenshot%202019-12-19%2014.05.19.png?raw=true)
 
-Initial layout for larger screens (above 1024px): 
+[Initial layout for larger screens above 1024px:](https://github.com/susan-wz/tweeter/blob/master/docs/Screenshot%202019-12-19%2014.05.35.png?raw=true)
 
-The *Compose Tweet* box appears on clicking the *Write a New Tweet* button with a sliding animation: 
+[The *Compose Tweet* box appears on clicking the *Write a New Tweet* button with a sliding animation - large screen view. ](https://github.com/susan-wz/tweeter/blob/master/docs/Screenshot%202019-12-19%2014.05.49.png?raw=true)
 
-Error message when the user submits a tweet that doesn't pass validation (either no text or above 140 charcters): 
+[Error message when the user submits a tweet that doesn't pass validation (either no text or above 140 charcters) - small screen view.](https://github.com/susan-wz/tweeter/blob/master/docs/Screenshot%202019-12-19%2014.07.12.png?raw=true)
 
 ## Getting Started
 
