@@ -5,6 +5,8 @@ $(document).ready(function () {
     let value = $(this).val();
     let counter = 140 - value.length;
     
+    $('#error-msg').slideUp(300).removeClass("show").empty();
+
     $(this).siblings(".counter").text(counter);
 
     if (counter < 0) {
@@ -17,5 +19,3 @@ $(document).ready(function () {
     .keyup();
 
 });
-
-/* use jquery to change the text*/

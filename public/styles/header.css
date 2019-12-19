@@ -3,6 +3,7 @@ header.page {
   width: 100%;
   background-color: #008be8;
   margin-top: 120px;
+  margin-bottom: 24px;
   text-align: center;
   background-image: url("/images/cubes.png");
 }
@@ -12,7 +13,8 @@ header.page {
   display: inline-block;
 }
 
-header h2 {
+section#new-tweet > h2 {
   display: inline-block;
-  margin: 0;
+  margin-top: 0px;
+  margin-bottom: 16px
 }

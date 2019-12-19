@@ -21,6 +21,9 @@
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+  <!-- Bounce CSS -->
+  <link rel="stylesheet" href="/styles/bounce.css" type="text/css" />
+
   <!-- Header CSS -->
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
@@ -29,6 +32,9 @@
 
   <!-- Tweets Section CSS -->
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -46,32 +52,33 @@
     <span class="home">Tweeter</span>
     <div>
       <span><b>Write</b> a new tweet</span>
-      <i id="write-button" class="fas fa-angle-double-down"></i>
+      <i id="write-button" class="fas fa-angle-double-down bounce"></i>
     </div>
   </nav>
 
   <!-- Page-specific (main) content here -->
-  <header class="page">
-    <div>
-      <img class="profile-pic" src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Susan</h2>
-    </div>
-  </header>
-  <main class="container">
-    <section id="new-tweet" class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <div id="error-msg"></div>
-      <form action="/tweets" method="POST">
-        <textarea id="new-tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
-      </form>
-    </section>
-    <section id="tweets-container"></section>
-  </main>
+  <div class="wholepage">
+    <header class="page">
+      <div>
+        <img class="profile-pic" src="/images/profile-hex.png">
+      </div>
+      <div>
+        <h2>Susan</h2>
+      </div>
+    </header>
+    <main class="container">
+      <section id="new-tweet" class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <div id="error-msg"></div>
+        <form action="/tweets" method="POST">
+          <textarea id="new-tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id="tweets-container"></section>
+    </main>
+  </div>
 </body>
 
 </html>

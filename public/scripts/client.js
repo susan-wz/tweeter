@@ -47,7 +47,7 @@ const loadTweets = function () {
 const showError = function (errorType) {
   let $errorMsg = "";
   if (errorType === "noText") {
-    $errorMsg = $("<span>").text("Tweet empty - planning on saying something there pal?");
+    $errorMsg = $("<span>").text("Tweet empty - type away!");
   } else {
     $errorMsg = $("<span>").text("Too many characters in your tweet - brevity is key here.");
   }
@@ -93,6 +93,7 @@ $(document).ready(function () {
         $("#new-tweet-textarea").focus();
       } else {
         $("#new-tweet").slideUp(300);
+        $('#error-msg').slideUp(300).removeClass("show").empty();
       }
     });
   });

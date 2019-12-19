@@ -1,0 +1,19 @@
+
+ @media (min-width: 1024px) {
+
+  .wholepage {
+     display: flex;
+   }
+
+   header.page {
+   margin: 160px 48px 48px 60px;
+   }
+
+   main {
+    margin: 160px 48px 48px 60px;
+   }
+
+   header.page {
+     max-width: 440px;
+   }
+ }
