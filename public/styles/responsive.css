@@ -1,3 +1,4 @@
+/* Layout shifter styling for screens above 1024 */
 
  @media (min-width: 1024px) {
 
@@ -15,5 +16,10 @@
 
    header.page {
      max-width: 440px;
+   }
+
+   nav {
+    background-color: #4056a1;
+    background-image: none;
    }
  }

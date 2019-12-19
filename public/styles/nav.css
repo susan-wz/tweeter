@@ -4,7 +4,8 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #4056a1;
+  background-color: #008be8;
+  background-image: url("/images/satin-weave.png"); 
   color: #FFFFFF;
   z-index: 1;
   display: flex;
@@ -30,9 +31,10 @@ nav span.bold {
 
 nav i {
   margin: 4px auto;
-  color: #008be8;;
+  color: white;
 }
 
 i:hover {
   cursor: pointer;
 }
+

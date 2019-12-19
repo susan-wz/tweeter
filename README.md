@@ -2,7 +2,17 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+I worked on this project in week 4 of the Lighthouse Labs bootcamp. We were given the starter code for this project so we could focus on practising our HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node and Express back-end skills.
+
+# Final Product
+
+Initial layout for smaller screens: 
+
+Initial layout for larger screens (above 1024px): 
+
+The *Compose Tweet* box appears on clicking the *Write a New Tweet* button with a sliding animation: 
+
+Error message when the user submits a tweet that doesn't pass validation (either no text or above 140 charcters): 
 
 ## Getting Started
 

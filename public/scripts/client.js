@@ -4,16 +4,18 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// function used to prevent cross site scripting attacks via tweets
 const escape = (string) => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(string));
   return div.innerHTML;
 };
 
+// function to create individual tweets ready for rendering to the page
 const createTweetElement = function (tweet) {
   const $tweet = $("<article>").addClass("tweet");
   let date = new Date(); let today = date.getTime();
-  let daysSince = Math.round((today - tweet.created_at) / 86400000);
+  let daysSince = Math.round((today - tweet.created_at) / 86400000); // milliseconds to days conversion
   const tweetContent = `<header>
           <img class="name" src="${tweet.user.avatars}">
           <span class="name">${tweet.user.name}</span>
@@ -32,18 +34,21 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
+// function to render all tweets on the page and put them in the tweet container
 const renderTweets = function (tweetArray) {
   tweetArray.forEach(function (tweet) {
     $('#tweets-container').prepend(createTweetElement(tweet));
   });
 };
 
+// function to run renderTweets upon page load and new tweet submission
 const loadTweets = function () {
   $.get('/tweets', function (data) {
     renderTweets(data);
   });
 };
 
+// function to create and render error message when user submits empty or too long tweet
 const showError = function (errorType) {
   let $errorMsg = "";
   if (errorType === "noText") {
@@ -61,8 +66,10 @@ const showError = function (errorType) {
 
 $(document).ready(function () {
 
+  // to load tweets upon initial page load
   loadTweets();
 
+  // functionality behind tweet submit button
   $("form").submit(function (event) {
     event.preventDefault();
     let tweetText = $('form').serialize();
@@ -71,13 +78,13 @@ $(document).ready(function () {
     } else if (tweetText.length > 145) {
       showError("tooMuchText");
     } else {
-      $('#error-msg').slideUp(300).removeClass("show").empty();
-      $.ajax({
+      $('#error-msg').slideUp(300).removeClass("show").empty(); // removes previous error message upon valid tweet submittion
+      $.ajax({ // makes ajax post request
         url: '/tweets',
         method: 'POST',
         data: tweetText,
       })
-        .then(function () {
+        .then(function () { // reloads tweets and empties textarea
           $('#tweets-container').empty();
           $("#new-tweet-textarea").val('');
           loadTweets();
@@ -85,6 +92,7 @@ $(document).ready(function () {
     }
   });
 
+  //functionality behind "write a new tweet" button in nav
   $(function () {
     const $button = $('#write-button');
     $button.on('click', function () {

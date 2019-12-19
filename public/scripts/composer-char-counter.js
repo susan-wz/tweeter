@@ -1,3 +1,5 @@
+// functionality behind character composer in new tweet section
+
 $(document).ready(function () {
 
 
