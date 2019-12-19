@@ -27,26 +27,26 @@ const createTweetElement = function (tweet) {
             <i class="fas fa-retweet"></i>
             <i class="fas fa-heart"></i>
           </div>
-        </footer>`
+        </footer>`;
   $tweet.append(tweetContent);
   return $tweet;
-}
+};
 
 const renderTweets = function (tweetArray) {
   tweetArray.forEach(function (tweet) {
     $('#tweets-container').prepend(createTweetElement(tweet));
-  })
-}
+  });
+};
 
 const loadTweets = function () {
   $.get('/tweets', function (data) {
     renderTweets(data);
-  })
-}
+  });
+};
 
 const showError = function (errorType) {
   let $errorMsg = "";
-  if (errorType == "noText") {
+  if (errorType === "noText") {
     $errorMsg = $("<span>").text("Tweet empty - planning on saying something there pal?");
   } else {
     $errorMsg = $("<span>").text("Too many characters in your tweet - brevity is key here.");
@@ -56,8 +56,8 @@ const showError = function (errorType) {
     .append($(`<i class="fas fa-exclamation-circle"></i>`))
     .append($errorMsg)
     .append($(`<i class="fas fa-exclamation-circle"></i>`))
-    .slideDown(300)
-}
+    .slideDown(300);
+};
 
 $(document).ready(function () {
 
@@ -71,29 +71,29 @@ $(document).ready(function () {
     } else if (tweetText.length > 145) {
       showError("tooMuchText");
     } else {
-      $('#error-msg').slideUp(300).removeClass("show").empty()
+      $('#error-msg').slideUp(300).removeClass("show").empty();
       $.ajax({
         url: '/tweets',
         method: 'POST',
         data: tweetText,
       })
-        .then(function (data) {
+        .then(function () {
           $('#tweets-container').empty();
-          $("#new-tweet-textarea").val('')
+          $("#new-tweet-textarea").val('');
           loadTweets();
-        })
+        });
     }
   });
 
   $(function () {
     const $button = $('#write-button');
     $button.on('click', function () {
-        if($("#new-tweet").css("display") === "none") {
-          $("#new-tweet").slideDown(300)
-          $("#new-tweet-textarea").focus();
-        } else {
-          $("#new-tweet").slideUp(300);
-        }
-    })
-  })
+      if ($("#new-tweet").css("display") === "none") {
+        $("#new-tweet").slideDown(300);
+        $("#new-tweet-textarea").focus();
+      } else {
+        $("#new-tweet").slideUp(300);
+      }
+    });
+  });
 });
